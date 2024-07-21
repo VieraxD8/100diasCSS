@@ -1,0 +1,112 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
+
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  background: rgb(253,163,49);
+  background: linear-gradient(54deg, rgba(253,163,49,1) 0%, rgba(253,199,49,1) 100%); 
+  color: #497081;
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+.list {
+    position: absolute;
+    width: 240px;
+    height: 280px;
+    top: 60px;
+    left: 80px;
+    background: #FFFFFF;
+    box-shadow: 4px 8px 12px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+  }
+  
+  .head {
+    padding: 20px 0;
+    margin: 0 30px;
+    border-bottom: 1px solid #D4DCE0;
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+  }
+  
+  .subtitle {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 4px 0;
+    margin: 0 30px;
+  }
+  
+  li {
+    position: relative;
+    display: block;
+    margin: 24px 0;
+    height: 14px;
+  }
+  
+  .text {
+    float: left;
+    font-size: 13px;
+    line-height: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button {
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    float: right;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #497081;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease-out 0.5s;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    stroke: #C8D4D9;
+    fill: none;
+    stroke-width: 1.5;
+    stroke-dasharray: 30 30;
+    stroke-dashoffset: 30;
+    transition: all 0.5s ease-out;
+  }
+
+  input {
+    display: none;
+  }
+  input:checked ~ .text {
+    color: #C8D4D9;
+  }
+  
+  input:checked ~ .button {
+    transition: all 0.4s ease-in;
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  input:checked ~ .checkmark {
+    stroke-dashoffset: 0;
+    transition: all 0.5s ease-out 0.4s;
+  }  

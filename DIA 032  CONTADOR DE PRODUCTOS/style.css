@@ -1,0 +1,115 @@
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+    background: #FDB03A;
+    background: linear-gradient(to top right, #D2592A 0%, #FDB03A 100%);
+
+    display: grid;
+    place-items: center;
+  }
+  
+  /*rectangulo*/
+  .counter {
+    position: absolute;
+    height: 40px;
+    width: 130px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.1);
+  }
+
+   .minus {
+    position: absolute;
+    z-index: 10;
+    width: 32px;
+    height: 32px;
+    top: 4px;
+    left: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /*linea del menos*/
+  
+   .line {
+    position: absolute;
+    height: 2px;
+    width: 18px;
+    left: 7px;
+    top: 15px;
+    background: #E26E6E;
+    transition: 0.3s ease-in-out;
+  }
+
+   .minus:hover {
+    background: #E26E6E;
+  } 
+
+   .minus:hover .line {
+    background: #fff;
+  }
+
+
+   .plus {
+    position: absolute;
+    z-index: 10;
+    width: 32px;
+    height: 32px;
+    top: 4px;
+    right: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+  }  
+
+  /* linea de  suma*/
+   .line-h {
+    position: absolute;
+    height: 2px;
+    width: 18px;
+    left: 7px;
+    top: 15px;
+    background: #8ED273;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* linea de  suma*/
+
+   .line-v {
+    position: absolute;
+    height: 18px;
+    width: 2px;
+    left: 15px;
+    top: 7px;
+    background: #8ED273;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .plus:hover {
+    background: #8ED273;
+  }
+
+  .plus:hover .line-h, .plus:hover .line-v {
+    background: #fff;
+  }
+
+  .number {
+    width: 130px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #6A85A0;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  
